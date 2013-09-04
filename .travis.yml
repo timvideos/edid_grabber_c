@@ -1,10 +1,11 @@
 language: c
 env:
   - PLATFORM=linux
-  - PLATFORM=windows
+#  - PLATFORM=windows
 before_install:
   - sudo apt-get update -qq
 #  - sudo apt-get upgrade
+  - sudo apt-get install -f aptitude
   - sudo aptitude why -y mingw-w64
   - sudo aptitude why-not -y mingw-w64
   - sudo aptitude install -y -f mingw-w64
