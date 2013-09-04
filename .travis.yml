@@ -1,0 +1,8 @@
+language: c
+# command to install dependencies
+install:
+  - sudo apt-get install mingw-w64
+# command to run tests
+script:
+  - make clean && make linux
+  - make clean && make windows
