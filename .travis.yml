@@ -3,7 +3,7 @@ env:
   - PLATFORM=linux
   - PLATFORM=windows
 install:
-  - dpkg --get-selections | grep hold
+  - dpkg --get-selections
   - sudo apt-get clean
   - sudo apt-get update
   - sudo apt-get install -f mingw-w64 gcc-mingw-w64
