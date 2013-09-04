@@ -5,7 +5,8 @@ env:
 before_install:
   - sudo apt-get update -qq
 #  - sudo apt-get upgrade
-  - sudo apt-get install -f read-edid
-  - sudo apt-get install -f mingw-w64
+  - sudo aptitude why -y mingw-w64
+  - sudo aptitude why-not -y mingw-w64
+  - sudo aptitude install -y -f mingw-w64
 script:
   - make $PLATFORM
