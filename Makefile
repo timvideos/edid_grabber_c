@@ -36,17 +36,16 @@ libcurl:
 	tar xzf curl-7.32.0.tar.gz
 	export CFLAGS=""; \
 	cd $(CURL_BUILD); \
-	./configure --prefix=$(CURL_PREFIX) $(CURL_FLAGS)
+	./configure --prefix=$(CURL_PREFIX) $(CURL_FLAGS) --disable-shared --disable-thread --disable-ftp --disable-file --disable-ldap --disable-ldaps --disable-rtsp --disable-proxy --disable-dict --disable-telnet --disable-tftp --disable-pop3 --disable-imap --disable-smtp --disable-gopher --disable-ipv6 --without-winssl --without-darwinssl --without-ssl --without-libmetalink --without-libssh2 --without-librtmp --without-libidn
 	make -C $(CURL_BUILD)
 	make -C $(CURL_BUILD) install
 
 linux:
-	export CURL_FLAGS="--disable-shared --disable-thread"; \
 	$(MAKE) -e
 
 windows:
 	export CROSS_PREFIX="i686-w64-mingw32-"; \
 	export CFLAGS_EXTRA="-m32"; \
-	export CURL_FLAGS="--host=i686-w64-mingw32  --disable-shared --disable-thread"; \
+	export CURL_FLAGS="--host=i686-w64-mingw32"; \
 	export TARGET="$(TARGET).exe"; \
 	$(MAKE) -e
