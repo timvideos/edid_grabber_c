@@ -14,7 +14,7 @@ CC = $(CROSS_PREFIX)gcc
 # Compiler flags, -g for debug, -c to make an object file, -Wall for warnings
 CFLAGS = -c -g -Wall -Isrc `$(CURL_CONFIG) --cflags` $(CFLAGS_EXTRA)
 
-LDFLAGS = `$(CURL_CONFIG) --static-libs`
+LDFLAGS = `$(CURL_CONFIG) --static-libs` $(LDFLAGS_EXTRA)
 
 # Link the target with all objects and libraries
 $(TARGET): libcurl $(OBJS)
@@ -56,6 +56,7 @@ windows:
         export PLATFORM=windows; \
         export CROSS_PREFIX="i686-w64-mingw32-"; \
         export CFLAGS_EXTRA="-m32"; \
+        export LDFLAGS_EXTRA="-lsetupapi"; \
         export CURL_FLAGS="--host=i686-w64-mingw32"; \
         export TARGET="$(TARGET).exe"; \
         $(MAKE) -e
