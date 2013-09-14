@@ -1,7 +1,9 @@
+[![Build Status](https://travis-ci.org/sewar/edid_grabber_c.png?branch=master)](https://travis-ci.org/sewar/edid_grabber_c)
+
 EDID Grabber in C
 ===============
 
-This tool grabs EDID data from the operating system and uploads them to [EDID.tv](https://edid.tv).
+This tool grabs EDID data from the operating system and uploads them to [EDID.tv](http://edid.tv).
 
 Supports Windows, Linux and Mac OS X.
 
