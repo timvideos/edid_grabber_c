@@ -16,7 +16,7 @@ void upload_text(char *text, char *text_type) {
 
     curl = curl_easy_init();
     if(curl) {
-        curl_easy_setopt(curl, CURLOPT_URL, "http://127.0.0.1:8000/api/upload/text");
+        curl_easy_setopt(curl, CURLOPT_URL, "http://edid.tv/api/upload/text");
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postfields);
 
         // Perform the request, res will get the return code
