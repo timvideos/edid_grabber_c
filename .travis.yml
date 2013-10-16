@@ -1,7 +1,7 @@
 language: c
 env:
   global:
-    - secure: "pf2Ldq386FHchHgU7NIarfsNzOTRmFf7hQjIPYkdBnsx+A1CHUpNmXwARZvQOxE931YKUKPrsVL1EvF9LFv+dGLNRGBQTXnG3IedXNlSwpardlme4R1SxezrsE3ZXeUZBpe9vG8f8jkl+JpedPKmiwr8sih9cZ+sDYRmo/9UTBw="
+    - secure: "jUA0R2GcQMQgDnilLU5NQ88OQ7jgAraLS8FCv1iDbNPK/Wcuw/Nd0O1yyXlOyv7VEB1d21mrDAnldqvJdh1K+A0I+XfePf685Nm8z9pU54Ruwt0/aAMXALzYnoSWjsce2xB/WnrWXkIIGf4QiidYUK8p9fBgzqpTLMOCgy7m63M="
   matrix:
     - PLATFORM=linux
     - PLATFORM=windows
