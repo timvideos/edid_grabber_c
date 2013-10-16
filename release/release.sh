@@ -8,9 +8,9 @@ if [ $TRAVIS != "true" ]
         exit 0
 fi
 
-if [ $TRAVIS_REPO_SLUG != "sewar/edid_grabber_c" ]
+if [ $TRAVIS_REPO_SLUG != "timvideos/edid_grabber_c" ]
     then
-        echo "This script runs only for sewar/edid_grabber_c"
+        echo "This script runs only for timvideos/edid_grabber_c"
         exit 0
 fi
 
