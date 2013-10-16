@@ -1,9 +1,14 @@
 language: c
 env:
-  - PLATFORM=linux
-  - PLATFORM=windows
+  global:
+    - secure: "gWw6nL9L7WFXAaXD5FxIlgftCei7Dx3mPRnubkjBBY35GQp6VDw1htHbznHHbbJzbNoKoZBBNSWtYyY/AUFrTJOnN47HA7xP7N1VDdRpdWxsWJfNALBeS6E3PQm8Ufz+3UFone7S5SI/Tb16hv258pErS223z3luoZT8Eb9EreQ="
+  matrix:
+    - PLATFORM=linux
+    - PLATFORM=windows
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq -f mingw-w64 binutils-mingw-w64-i686 binutils-mingw-w64-x86-64
+  - sudo apt-get install -qq curl zip
 script:
   - make $PLATFORM
+  - chmod +x release/release.sh && ./release/release.sh
