@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sewar/edid_grabber_c.png?branch=master)](https://travis-ci.org/sewar/edid_grabber_c)
+[![Build Status](https://travis-ci.org/timvideos/edid_grabber_c.png?branch=master)](https://travis-ci.org/timvideos/edid_grabber_c)
 
 EDID Grabber in C
 ===============
